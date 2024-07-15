@@ -5,7 +5,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 import { QueryParamProvider } from 'use-query-params'
-import { TerminalContextProvider } from "react-terminal";
+import { TerminalContextProvider } from 'react-terminal'
 
 // Importing the Bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css'
