@@ -18,6 +18,10 @@ class CommandRouter {
         return this.walletInfo.getWalletInfo({wallet})
       }
 
+      if(cmdStr === 'wallet_import_mnemonic') {
+        return `args: ${JSON.stringify(args, null, 2)}`
+      }
+
       // Default value
       return 'Command not found'
     } catch (err) {

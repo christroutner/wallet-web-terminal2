@@ -19,10 +19,15 @@ function GetBalance (props) {
       <span>
         <strong>clear</strong> - clears the console. <br />
         <strong>wallet_info</strong> - Display addresses, mnemonic, and private key for the wallet. <br />
+        <strong>wallet_import_mnemonic</strong> - Import a mnemonic and open it as the wallet. <br />
       </span>
     ),
 
-    wallet_info: commandRouter.routeCommand({ cmdStr: 'wallet_info', wallet })
+    wallet_info: commandRouter.routeCommand({ cmdStr: 'wallet_info', wallet }),
+
+    wallet_import_mnemonic: (args) => {
+      return commandRouter.routeCommand({ cmdStr: 'wallet_import_mnemonic', args, wallet})
+    }
   }
 
   const welcomeMessage = (
